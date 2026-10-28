@@ -1,0 +1,17 @@
+{
+  "回到主界面": {"next": ["主界面_已到达", "通用_关闭弹窗", "通用_点击返回"], "timeout": 120000},
+  "主界面_已到达": {
+    "recognition": {"type": "TemplateMatch", "param": {"template": ["通用/主界面标志.png"], "threshold": 0.82}},
+    "next": []
+  },
+  "通用_关闭弹窗": {
+    "recognition": {"type": "TemplateMatch", "param": {"template": ["通用/关闭按钮.png"], "threshold": 0.80}},
+    "action": {"type": "Click"},
+    "next": ["主界面_已到达", "通用_关闭弹窗", "通用_点击返回"]
+  },
+  "通用_点击返回": {
+    "recognition": {"type": "TemplateMatch", "param": {"template": ["通用/返回按钮.png"], "threshold": 0.80}},
+    "action": {"type": "Click"},
+    "next": ["主界面_已到达", "通用_关闭弹窗", "通用_点击返回"]
+  }
+}

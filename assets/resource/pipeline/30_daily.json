@@ -1,0 +1,29 @@
+{
+  "每日签到": {"next": ["签到_打开入口"]},
+  "签到_打开入口": {
+    "recognition": {"type": "TemplateMatch", "param": {"template": ["日常/签到入口.png"], "threshold": 0.80}},
+    "action": {"type": "Click"},
+    "next": ["签到_领取"]
+  },
+  "签到_领取": {
+    "recognition": {"type": "OCR", "param": {"expected": ["TODO_签到领取文案"]}},
+    "action": {"type": "Click"},
+    "next": ["通用_关闭弹窗", "回到主界面"]
+  },
+  "领取每日任务奖励": {"next": ["任务_打开入口"]},
+  "任务_打开入口": {
+    "recognition": {"type": "OCR", "param": {"expected": ["TODO_任务入口文案"]}},
+    "action": {"type": "Click"},
+    "next": ["任务_一键领取"]
+  },
+  "任务_一键领取": {
+    "recognition": {"type": "TemplateMatch", "param": {"template": ["日常/一键领取.png"], "threshold": 0.80}},
+    "action": {"type": "Click"},
+    "next": ["任务_确认奖励"]
+  },
+  "任务_确认奖励": {
+    "recognition": {"type": "OCR", "param": {"expected": ["TODO_奖励确认文案"]}},
+    "action": {"type": "Click"},
+    "next": ["回到主界面"]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "开始育成": {"next": ["育成_进入模式"]},
+  "育成_进入模式": {
+    "recognition": {"type": "OCR", "param": {"expected": ["TODO_育成入口文案"]}},
+    "action": {"type": "Click"},
+    "next": ["育成_回合循环"]
+  },
+  "育成_回合循环": {"next": ["育成_识别目标比赛", "育成_识别训练入口", "育成_识别回合结束", "育成_识别育成完成"], "timeout": 120000},
+  "育成_识别目标比赛": {
+    "recognition": {"type": "OCR", "param": {"expected": ["TODO_目标比赛文案"]}},
+    "action": {"type": "Click"},
+    "next": ["育成_确认比赛", "育成_回合循环"]
+  },
+  "育成_确认比赛": {
+    "recognition": {"type": "TemplateMatch", "param": {"template": ["育成/比赛按钮.png"], "threshold": 0.80}},
+    "action": {"type": "Click"},
+    "next": ["育成_回合循环"]
+  },
+  "育成_识别训练入口": {
+    "recognition": {"type": "TemplateMatch", "param": {"template": ["育成/训练按钮.png"], "threshold": 0.80}},
+    "action": {"type": "Click"},
+    "next": ["育成_选择训练"]
+  },
+  "育成_选择训练": {
+    "recognition": {"type": "OCR", "param": {"expected": ["TODO_训练选项文案"]}},
+    "action": {"type": "Click"},
+    "next": ["育成_回合循环"]
+  },
+  "育成_识别回合结束": {
+    "recognition": {"type": "TemplateMatch", "param": {"template": ["育成/回合结束.png"], "threshold": 0.80}},
+    "action": {"type": "Click"},
+    "next": ["育成_回合循环"]
+  },
+  "育成_识别育成完成": {
+    "recognition": {"type": "OCR", "param": {"expected": ["TODO_育成完成文案"]}},
+    "action": {"type": "Click"},
+    "next": ["回到主界面"]
+  }
+}

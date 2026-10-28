@@ -1,0 +1,12 @@
+{
+  "启动游戏": {
+    "action": {"type": "StartApp", "param": {"package": "TODO_赛马娘包名"}},
+    "next": ["启动_点击进入游戏"]
+  },
+  "启动_点击进入游戏": {
+    "recognition": {"type": "TemplateMatch", "param": {"template": ["启动/进入游戏.png"], "threshold": 0.82}},
+    "action": {"type": "Click"},
+    "next": ["启动_等待主界面"]
+  },
+  "启动_等待主界面": {"next": ["主界面_已到达", "通用_关闭弹窗"], "timeout": 180000}
+}

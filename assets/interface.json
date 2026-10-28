@@ -1,0 +1,18 @@
+{
+  "interface_version": 2,
+  "name": "MaaUma",
+  "description": "赛马娘自动化助手：育成循环、日常领取与通用导航",
+  "license": "MIT",
+  "version": "0.1.0",
+  "welcome": "请先补齐 docs/resource-placeholders.md 中的模板图和 OCR 文案。",
+  "controller": [{"name": "Android 模拟器", "type": "Adb", "display_short_side": 720}],
+  "resource": [{"name": "默认资源", "path": ["./resource"]}],
+  "task": [
+    {"name": "启动游戏并进入主界面", "entry": "启动游戏"},
+    {"name": "回到主界面", "entry": "回到主界面"},
+    {"name": "开始一轮育成", "entry": "开始育成"},
+    {"name": "领取每日任务奖励", "entry": "领取每日任务奖励"},
+    {"name": "每日签到", "entry": "每日签到"}
+  ],
+  "option": {}
+}

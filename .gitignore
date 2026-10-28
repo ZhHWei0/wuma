@@ -1,0 +1,12 @@
+/MaaFramework/
+/build/
+/dist/
+/logs/
+/debug/
+*.log
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+assets/resource/model/ocr/*.onnx
+assets/resource/image/_runtime/
